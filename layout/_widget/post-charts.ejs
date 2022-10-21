@@ -64,11 +64,15 @@
     let postsOption = {
         title: {
             text: '<%- __("postPublishChart")  %>',
-            top: -5,
+            top: 0,
             x: 'center'
         },
         tooltip: {
             trigger: 'axis'
+        },
+        grid: {
+            top: 64,
+            right: 48
         },
         xAxis: {
             type: 'category',
@@ -119,12 +123,16 @@
     let categoriesOption = {
         title: {
             text: '<%- __("categoriesChart")  %>',
-            top: -4,
+            top: 0,
             x: 'center'
         },
         tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        grid: {
+            top: 64,
+            right: 48
         },
         series: [
             {
@@ -168,10 +176,14 @@
     let tagsOption = {
         title: {
             text: '<%- __("top10TagsChart")  %>',
-            top: -5,
+            top: 0,
             x: 'center'
         },
         tooltip: {},
+        grid: {
+            top: 64,
+            right: 48
+        },
         xAxis: [
             {
                 type: 'category',

@@ -635,7 +635,7 @@ header .go-back i {
         background: rgba(233, 30, 99, 0.75);
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-        background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
 
@@ -681,7 +681,7 @@ header .go-back i {
         background: rgba(233, 30, 99, 0.75);
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-        background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
 
@@ -1634,6 +1634,19 @@ thead {
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+#aboutme .social-link a.social-link-github {
+    border: 1px solid #000000;
+    background: radial-gradient(#000000, #000000);
+}
+#aboutme .social-link a.social-link-email {
+border: 1px solid #3f81de;
+background: radial-gradient(#3f81de, #3f81de);
+}
+#aboutme .social-link a.social-link-rss {
+border: 1px solid #08df22;
+background: radial-gradient(#08df22, #08df22);
 }
 
 .profile .avatar-img {
