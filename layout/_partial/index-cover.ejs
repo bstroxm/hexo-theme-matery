@@ -24,10 +24,11 @@ var coverPostsCount = coverPosts.length;
             <%- partial('_partial/bg-cover-content') %>
 
             <div class="cover-btns">
-                <a href="<%=
+                <a id="scrollToMainContent" class="waves-effect waves-light btn scroll-down-effects">
+                    <!-- href="<%=
                         [theme.dream, theme.music, theme.video, theme.recommend]
                                 .some(i=>i.enable)? "#indexCard": "#articles"
-                        %>" class="waves-effect waves-light btn scroll-down-effects">
+                        %>" -->
                     <i class="fa fa-angle-double-down"></i>
                 </a>
 
@@ -121,6 +122,17 @@ var coverPostsCount = coverPosts.length;
                 }
             }, 1000)
         }
+
+        // 直达主体内容页面按钮点击事件
+        $('#scrollToMainContent').on('click', function () {
+            const mainContent = $("<%= [theme.dream, theme.music, theme.video, theme.recommend].some(i=>i.enable)? "#indexCard": "#articles" %>");
+            if (mainContent && mainContent[0] && mainContent[0].offsetTop) {
+                window.scrollTo({
+                    top: Math.max(0, mainContent[0].offsetTop - 74), // 上面margin-top -64，且card的margin-top为10，加起来是74
+                    behavior: 'smooth'
+                });
+            }
+        })
 
         coverSlider.carousel({
             duration: Number('<%- theme.cover.duration %>'),
