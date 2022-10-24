@@ -127,7 +127,7 @@ header .side-nav .mobile-head .logo-desc {
   background-image: linear-gradient(to left, #3ffff6 0%, #08df22 100%);
 }
 
-.page-footer.bg-color {
+.bg-footer-color {
   background: linear-gradient(to bottom, #0b1728 0%, #0b1728 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   background-blend-mode: multiply;
   opacity: 0.8;
@@ -149,9 +149,28 @@ header .side-nav .mobile-head .logo-desc {
   animation: unset;
 }
 
+#sma {
+  box-shadow: #aaa 2px 5px 10px;
+  width: 38px;
+  height: 38px;
+  bottom: 100px;
+  padding-top: 15px;
+}
+#sma .fa-moon {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 1.48rem !important;
+}
+#sma .fa-lightbulb {
+  position: absolute;
+  right: 12px;
+  bottom: 9px;
+  font-size: 1.5rem !important;
+}
 
 .top-scroll {
-  bottom: 60px;
+  bottom: 50px;
 }
 .top-scroll .btn-floating.btn-large {
   width: 38px;
@@ -164,7 +183,7 @@ header .side-nav .mobile-head .logo-desc {
 }
 
 #floating-toc-btn {
-  bottom: 110px !important;
+  bottom: 150px !important;
 }
 #floating-toc-btn .btn-floating {
   width: 38px !important;
@@ -178,7 +197,18 @@ header .side-nav .mobile-head .logo-desc {
 .post-statis .statis .count a {
   color:#08df22; 
 }
-
+#aboutme .social-link a.social-link-github {
+  border: 1px solid #000000;
+  background: radial-gradient(#000000, #000000);
+}
+#aboutme .social-link a.social-link-email {
+  border: 1px solid #3f81de;
+  background: radial-gradient(#3f81de, #3f81de);
+}
+#aboutme .social-link a.social-link-rss {
+  border: 1px solid #08df22;
+  background: radial-gradient(#08df22, #08df22);
+}
 
 header .brand-logo .logo-img {
   height: 40px;
@@ -189,11 +219,11 @@ header .brand-logo .logo-img {
 .bg-cover-blur {
   background-position: center center;
   background-size: cover;
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -ms-filter: blur(10px);
-  -o-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -ms-filter: blur(15px);
+  -o-filter: blur(15px);
+  filter: blur(15px);   
 }
 .bg-cover-title {
   position: relative;

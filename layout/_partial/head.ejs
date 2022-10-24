@@ -74,19 +74,15 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     <%- partial('_partial/google-analytics') %>
     <title><%= pageTitle %></title>
-
-    <script>
-        //黑夜模式判断
-        if (localStorage.getItem('isDark') === '1') {
-            document.documentElement.setAttribute("data-theme", 'dark')
-        } else {
-            document.documentElement.setAttribute("data-theme", 'light')
-        }
-    </script>
-
+    
     <link rel="icon" type="<%= iconType %>" href="<%- theme.jsDelivr.url %><%- url_for(theme.favicon) %>">
-    <%- partial('_partial/main-style') %>
-
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.fontAwesome) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.materialize) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.aos) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.animate) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.lightgallery) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.matery) %>">
+    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.mycss) %>">
+    <link rel="stylesheet" type="text/css" href="/css/dark.css">
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.jquery) %>"></script>
-
 </head>

@@ -1,4 +1,29 @@
 $(function () {
+  /* 深色模式按钮设置 */
+  if (localStorage.getItem('dark') === '1') {
+    document.body.classList.add('dark')
+    $('#nightMode').removeClass('fa-moon').addClass('fa-lightbulb')
+  } else {
+    /*定时开启暗色模式<默认晚22点至早6点默认开启>*/
+    if (new Date().getHours() >= 22 || new Date().getHours() < 6) {
+      document.body.classList.add('dark')
+      $('#nightMode').removeClass('fa-moon').addClass('fa-lightbulb')
+    } else {
+      if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark')
+      }
+    }
+  }
+
+  /*提醒开启功能*/
+  // setTimeout(function () {
+  //   if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+  //     let toastHTML =
+  //       '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>'
+  //     M.toast({ html: toastHTML })
+  //   }
+  // }, 2200)
+
   /**
    * 添加文章卡片hover效果.
    */
@@ -175,17 +200,18 @@ $(function () {
   $('.tooltipped').tooltip()
 })
 
-//黑夜模式提醒开启功能
-setTimeout(function () {
-  if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && document.documentElement.getAttribute('data-theme') !== 'dark') {
-    let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bellaria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)</span>'
-    M.toast({ html: toastHTML })
+/* 深色模式设置*/
+function switchNightMode() {
+  var body = document.body
+  if (body.classList.contains('dark')) {
+    document.body.classList.remove('dark')
+    localStorage.setItem('dark', '0')
+    $('#nightMode').removeClass('fa-lightbulb').addClass('fa-moon')
+    return
+  } else {
+    document.body.classList.add('dark')
+    localStorage.setItem('dark', '1')
+    $('#nightMode').removeClass('fa-moon').addClass('fa-lightbulb')
+    return
   }
-}, 2200)
-
-//黑夜模式判断
-if (localStorage.getItem('isDark') === '1') {
-  $('#sum-moon-icon').addClass('fa-sun').removeClass('fa-moon')
-} else {
-  $('#sum-moon-icon').removeClass('fa-sun').addClass('fa-moon')
 }

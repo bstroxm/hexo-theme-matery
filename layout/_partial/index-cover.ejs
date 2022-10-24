@@ -1,3 +1,44 @@
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
 <%
 // get all cover posts.
 var coverPosts = [];
@@ -24,11 +65,10 @@ var coverPostsCount = coverPosts.length;
             <%- partial('_partial/bg-cover-content') %>
 
             <div class="cover-btns">
-                <a id="scrollToMainContent" class="waves-effect waves-light btn scroll-down-effects">
-                    <!-- href="<%=
+                <a href="<%=
                         [theme.dream, theme.music, theme.video, theme.recommend]
                                 .some(i=>i.enable)? "#indexCard": "#articles"
-                        %>" -->
+                        %>" class="waves-effect waves-light btn scroll-down-effects">
                     <i class="fa fa-angle-double-down"></i>
                 </a>
 
@@ -122,17 +162,6 @@ var coverPostsCount = coverPosts.length;
                 }
             }, 1000)
         }
-
-        // 直达主体内容页面按钮点击事件
-        $('#scrollToMainContent').on('click', function () {
-            const mainContent = $("<%= [theme.dream, theme.music, theme.video, theme.recommend].some(i=>i.enable)? "#indexCard": "#articles" %>");
-            if (mainContent && mainContent[0] && mainContent[0].offsetTop) {
-                window.scrollTo({
-                    top: Math.max(0, mainContent[0].offsetTop - 74), // 上面margin-top -64，且card的margin-top为10，加起来是74
-                    behavior: 'smooth'
-                });
-            }
-        })
 
         coverSlider.carousel({
             duration: Number('<%- theme.cover.duration %>'),
