@@ -8,11 +8,22 @@ body {
 .bg-cover .brand .title {
   margin-bottom: 20px !important;
 }
+@media only screen and (max-width: 760px) { 
+  .bg-cover .brand .title {
+    font-size: 3rem;
+  }
+}
 .bg-cover .description {
   color: #eff;
 }
 header .side-nav .mobile-head .logo-desc {
   color: #eff;
+}
+header .side-nav .fa-fw {
+  margin-right: 0;
+}
+.sidenav {
+  height: 100vh;
 }
 
 /* 首页箭头自定义 */
@@ -151,7 +162,7 @@ header .side-nav .mobile-head .logo-desc {
 
 
 .top-scroll {
-  bottom: 60px;
+  bottom: 50px;
 }
 .top-scroll .btn-floating.btn-large {
   width: 38px;
@@ -163,8 +174,33 @@ header .side-nav .mobile-head .logo-desc {
   font-size: 1.3rem;
 }
 
+
+.theme-switch {
+  box-shadow: #aaa 2px 5px 10px;
+  width: 38px;
+  height: 38px;
+  bottom: 100px;
+  padding-top: 15px;
+}
+html[data-theme='dark'] .theme-switch {
+  box-shadow: #333 2px 5px 10px;
+}
+.theme-switch .fa-moon {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 1.48rem !important;
+}
+.theme-switch .fa-lightbulb {
+  position: absolute;
+  right: 12px;
+  bottom: 9px;
+  font-size: 1.5rem !important;
+}
+
+
 #floating-toc-btn {
-  bottom: 110px !important;
+  bottom: 150px !important;
 }
 #floating-toc-btn .btn-floating {
   width: 38px !important;
@@ -179,6 +215,29 @@ header .side-nav .mobile-head .logo-desc {
   color:#08df22; 
 }
 
+
+@media only screen and (max-width: 992px) {
+  header .brand-logo a {
+    width: calc(100vw - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+  }
+
+  header .brand-logo .logo-img {
+    margin-right: 16px;
+  }
+
+  header .brand-logo .logo-span {
+    display: inline-block;
+    max-width: calc(100% - 56px);
+    height: 56px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
 
 header .brand-logo .logo-img {
   height: 40px;

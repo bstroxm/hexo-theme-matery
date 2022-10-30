@@ -10,6 +10,7 @@
 
 /* 背景颜色变黑色 */
 html[data-theme='dark'] body,
+html[data-theme='dark'] header .side-nav,
 html[data-theme='dark'] #rewardModal.modal,
 html[data-theme='dark'] #rewardModal .modal-content {
     background-color: #12121c;
@@ -63,44 +64,46 @@ html[data-theme='dark'] h3,
 html[data-theme='dark'] h4,
 html[data-theme='dark'] h5,
 html[data-theme='dark'] h6,
-html[data-theme='dark'] header .side-nav .menu-list a,
-html[data-theme='dark'] header .side-nav .mobile-head .logo-desc,
-html[data-theme='dark'] header .side-nav .mobile-head .logo-name,
 html[data-theme='dark'] li,
 html[data-theme='dark'] td,
 html[data-theme='dark'] p,
 html[data-theme='dark'] pre,
 html[data-theme='dark'] .markmap-container svg g div,
 html[data-theme='dark'] .read .bg-cover .description {
-    color: rgba(255, 255, 255, 0.65); /*.85为透明度，可依据需求修改*/
+    color: rgba(255, 255, 255, 0.75); /*.85为透明度，可依据需求修改*/
+}
+html[data-theme='dark'] header .brand-logo .logo-span,
+html[data-theme='dark'] header .side-nav .menu-list a,
+html[data-theme='dark'] header .side-nav .mobile-head .logo-name {
+    color: rgba(255, 255, 255, 0.9); /*.85为透明度，可依据需求修改*/
 }
 html[data-theme='dark'] .fArticleTitle, html[data-theme='dark'] .fArticleAuthor, html[data-theme='dark'] .fArticleUpdate {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 html[data-theme='dark'] .v[data-class="v"] .vinput, .v[data-class="v"] .veditor, .v[data-class="v"] p, .v[data-class="v"] pre code, .v[data-class="v"] .status-bar {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
 }
 html[data-theme='dark'] blockquote {
     background-color: #666 !important;
     border-left: 5px solid #42b983 !important;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
 }
 html[data-theme='dark'] .nav-menu li .sub-nav li a {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 html[data-theme='dark'] th td li {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
     background-color: #2f3742 !important;
 }
 html[data-theme='dark'] .prev-next .article-badge {
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 html[data-theme='dark'] header .side-nav .menu-list a {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 
 html[data-theme='dark'] .mobile-menu-list a i {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 html[data-theme='dark'] .bg-color {
     opacity:.8 !important;
@@ -110,7 +113,8 @@ html[data-theme='dark'] #headNav.bg-color {
     filter: brightness(0.85);
 }
 
-html[data-theme='dark'] .top-scroll .btn-floating {
+html[data-theme='dark'] .top-scroll .btn-floating,
+html[data-theme='dark'] #sma .theme-switch {
     opacity:.8;
 }
 html[data-theme='dark'] span.bg-color {
@@ -133,17 +137,23 @@ html[data-theme='dark'] #waline .wl-info span,
 html[data-theme='dark'] #waline .wl-info div,
 html[data-theme='dark'] .tag_share .chip,
 html[data-theme='dark'] .archive-container,
-html[data-theme='dark'] .v[data-class="v"] .vcount,
-html[data-theme='dark'] header .side-nav,
-html[data-theme='dark'] header .side-nav .menu-list .m-nav-show {
+html[data-theme='dark'] .v[data-class="v"] .vcount {
     filter: brightness(0.85);
     opacity: 0.8;
 }
+html[data-theme='dark'] header .side-nav,
+html[data-theme='dark'] header .side-nav .menu-list .m-nav-show {
+    filter: brightness(0.95);
+    opacity: 0.95;
+}
+html[data-theme='dark'] header .side-nav .bg-color {
+    opacity: 1 !important;
+}
 html[data-theme='dark'] .waline-card .comment_headling span {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
 }
 html[data-theme='dark'] #waline .wl-card .wl-meta span{
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
     background: #666666;
 }
 
@@ -151,7 +161,7 @@ html[data-theme='dark'] .tabs .tab a,
 html[data-theme='dark'] .tabs .tab {
     filter: brightness(0.85);
     font-weight: bolder;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /*首页文章滑动卡片文字*/
@@ -174,16 +184,16 @@ html[data-theme='dark'] .card-content h6 > code,
 html[data-theme='dark'] .card-content a > code,
 html[data-theme='dark'] .card-content td > code,
 html[data-theme='dark'] .card-content li > code {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
     background-color: #666666;
 }
 
 html[data-theme='dark'] p[style] .img-item {
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 html[data-theme='dark'] .card-content mark {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.75);
     background-color: #2d2d2d;
 }
 html[data-theme='dark'] table th {
@@ -191,7 +201,7 @@ html[data-theme='dark'] table th {
     color: rgb(49 190 126);
 }
 html[data-theme='dark'] .btn-floating, html[data-theme='dark'] #floating-toc-btn .btn-floating, html[data-theme='dark'] .top-scroll .btn-floating, html[data-theme='dark'] .btn-floating, html[data-theme='dark'] #switchspring {
-    background-color:rgba(255, 255, 255, 0.65);
+    background-color:rgba(255, 255, 255, 0.75);
 }
 /*音乐播放器*/
 html[data-theme='dark'] .aplayer {
@@ -255,7 +265,8 @@ html[data-theme='dark'] .recommend .post-card,
 html[data-theme='dark'] .post-card,
 html[data-theme='dark'] .read-more,
 html[data-theme='dark'] .top-scroll .btn-floating, 
-html[data-theme='dark'] #floating-toc-btn .btn-floating, 
+html[data-theme='dark'] #floating-toc-btn .btn-floating,
+html[data-theme='dark'] #sma .theme-switch, 
 html[data-theme='dark'] #vcomments .vtag, 
 html[data-theme='dark'] #waline .v, 
 html[data-theme='dark'] #cd-timeline,
@@ -485,5 +496,5 @@ html[data-theme='dark'] .vicon {
 
 html[data-theme='dark'] #vcomments .vbtn,
 html[data-theme='dark'] .vempty {
-    color: rgba(255, 255, 255, 0.65) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
 }

@@ -1,0 +1,23 @@
+<!-- 深色模式按钮 -->
+<div id="sma" >
+    <a class="theme-switch" title="模式切换" onclick="switchNightMode()" >
+        <i class="fa fa-moon" id="nightMode" aria-hidden="true"></i>
+    </a>
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            document.documentElement.getAttribute("data-theme") === 'dark'
+            ? (document.documentElement.setAttribute("data-theme", 'light'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : (document.documentElement.setAttribute("data-theme", 'dark'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
